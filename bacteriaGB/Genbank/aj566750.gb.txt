@@ -1,0 +1,359 @@
+LOCUS       AJ566750                7920 bp    DNA     linear   BCT 02-AUG-2007
+DEFINITION  Staphylococcus aureus arginine deiminase pathway gene cluster.
+ACCESSION   AJ566750
+VERSION     AJ566750.1  GI:31874418
+KEYWORDS    arcA gene; arcB gene; arcC gene; arcD gene; arcR gene; arginine
+            deiminase; arginine repressor; arginine/ornithine antiporter; argR
+            gene; carbamate kinase; clfB gene; clumping factor B; ornithine
+            carbamoyltransferase, catabolic; transcriptional regulator.
+SOURCE      Staphylococcus aureus
+  ORGANISM  Staphylococcus aureus
+            Bacteria; Firmicutes; Bacillales; Staphylococcus.
+REFERENCE   1
+  AUTHORS   Makhlin,J., Kofman,T., Borovok,I., Kohler,C., Engelmann,S.,
+            Cohen,G. and Aharonowitz,Y.
+  TITLE     Staphylococcus aureus ArcR Controls Expression of the Arginine
+            Deiminase Operon
+  JOURNAL   J. Bacteriol. 189 (16), 5976-5986 (2007)
+   PUBMED   17557828
+REFERENCE   2  (bases 1 to 7920)
+  AUTHORS   Borovok,I.A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (15-JUN-2003) Borovok I.A., Department of Molecular
+            Microbiology and Biotechnology, Tel Aviv University, Ramat Aviv,
+            Tel Aviv, 69978, ISRAEL
+FEATURES             Location/Qualifiers
+     source          1..7920
+                     /organism="Staphylococcus aureus"
+                     /mol_type="genomic DNA"
+                     /strain="RN4220"
+                     /db_xref="taxon:1280"
+     stem_loop       65..118
+     repeat_region   73..110
+                     /rpt_type=DIRECT
+                     /rpt_unit_range=103..110
+                     /rpt_unit_range=72..80
+     gene            291..1020
+                     /gene="argR"
+     stem_loop       291..335
+                     /gene="argR"
+     RBS             354..358
+                     /gene="argR"
+     CDS             367..816
+                     /gene="argR"
+                     /function="putative role in arc operon regulation"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="arginine repressor"
+                     /protein_id="CAD98180.1"
+                     /db_xref="GI:31874419"
+                     /db_xref="GOA:Q7X2S4"
+                     /db_xref="HSSP:O31408"
+                     /db_xref="InterPro:IPR001669"
+                     /db_xref="InterPro:IPR011991"
+                     /db_xref="UniProtKB/TrEMBL:Q7X2S4"
+                     /translation="MKKSKRLEIVSTIVKKHKIYKKEQIISYIEEYFGVRYSATTIAK
+                     DLKELNIYRVPIDCETWIYKAINNQTEQEMREKFRHYCEHEVLSSIINGSYIIVKTSP
+                     GFAQGINYFIDQLNIEEILGTVSGNDTTLILTASNDMAEYVYAKLFK"
+     terminator      855..904
+                     /gene="argR"
+                     /note="putative rho-independent transcriptional
+                     terminator"
+     terminator      972..1020
+                     /gene="argR"
+                     /note="putative rho-independent transcriptional
+                     terminator"
+     gene            1085..2398
+                     /gene="arcA"
+     protein_bind    1085..1100
+                     /gene="arcA"
+                     /bound_moiety="repressor"
+     RBS             1149..1154
+                     /gene="arcA"
+     CDS             1163..2398
+                     /gene="arcA"
+                     /EC_number="3.5.3.6"
+                     /function="arginine degradation, first step"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="arginine deiminase"
+                     /protein_id="CAD98181.1"
+                     /db_xref="GI:31874420"
+                     /db_xref="GOA:Q7AS72"
+                     /db_xref="HSSP:P13981"
+                     /db_xref="InterPro:IPR003198"
+                     /db_xref="InterPro:IPR003876"
+                     /db_xref="UniProtKB/TrEMBL:Q7AS72"
+                     /translation="MTDGPIKVNSEIGALKTVLLKRPGKELENLVPDYLDGLLFDDIP
+                     YLEVAQKEHDHFAQVLREEGVEVLYLEKLAAESIENPQVRSEFIDDVLAESKKTILGH
+                     EEEIKALFATLSNQELVDKIMSGVRKEEINPKCTHLVEYMDDKYPFYLDPMPNLYFTR
+                     DPQASIGHGITINRMFWRARRRESIFIQYIVKHHPRFKDANIPIWLDRDCPFNIEGGD
+                     ELVLSKDVLAIGVSERTSAQAIEKLARRIFENPQATFKKVVAIEIPTSRTFMHLDTVF
+                     TMIDYDKFTMHSAILKAEGNMNIFIIEYDDVNKDIAIKQSSHLKDTLEDVLGIDDIQF
+                     IPTGNGDVIDGAREQWNDGSNTLCIRPGVVVTYDRNYVSNDLLRQKGIKVIEISGSEL
+                     VRGRGGPRCMSQPLFREDI"
+     gene            2419..3515
+                     /gene="arcB"
+     RBS             2419..2424
+                     /gene="arcB"
+     CDS             2431..3441
+                     /gene="arcB"
+                     /EC_number="2.1.3.3"
+                     /function="arginine degradation, second step"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="ornithine carbamoyltransferase"
+                     /protein_id="CAD98182.1"
+                     /db_xref="GI:31874421"
+                     /db_xref="GOA:Q7AS71"
+                     /db_xref="HSSP:P04391"
+                     /db_xref="InterPro:IPR002292"
+                     /db_xref="InterPro:IPR006130"
+                     /db_xref="InterPro:IPR006131"
+                     /db_xref="InterPro:IPR006132"
+                     /db_xref="UniProtKB/TrEMBL:Q7AS71"
+                     /translation="MTEIQKPYDLKGRSLLKESDFTKAEFEGLIDFAITLKEYKKNGI
+                     KHHYLSGKNIALLFEKNSTRTRAAFTVASIDLGAHPEFLGKNDIQLGKKESVEDTAKV
+                     LGRMFDGIEFRGFSQQAVEDLAKFSGVPVWNGLTDDWHPTQMLADFMTIKENFGYLEG
+                     INLTYVGDGRNNIAHSLMVAGAMLGVNVRICTPKSLNPKEAYVDIAKEKASQYGGSVM
+                     ITDNIAEAVENTDAIYTDVWVSMGEESEFEQRINLLKDYQVNQQMFDLTGKDSTIFLH
+                     CLPAFHDTNTLYGQEIYEKYGLAEMEVTDQIFRSEHSKVFDQAENRMHTIKAVMAATL
+                     GS"
+     stem_loop       3457..3515
+                     /gene="arcB"
+                     /function="putative translation regulatory element"
+     gene            3519..4962
+                     /gene="arcD"
+     RBS             3519..3524
+                     /gene="arcD"
+     CDS             3532..4962
+                     /gene="arcD"
+                     /function="essential for electroneutral exchange between
+                     arginine and ornithine"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative arginine/ornithine antiporter"
+                     /protein_id="CAD98183.1"
+                     /db_xref="GI:31874422"
+                     /db_xref="GOA:Q7X2S3"
+                     /db_xref="InterPro:IPR002293"
+                     /db_xref="InterPro:IPR004754"
+                     /db_xref="InterPro:IPR004841"
+                     /db_xref="UniProtKB/TrEMBL:Q7X2S3"
+                     /translation="MNESGDNKLSKSSLIGLVIGSMIGGGAFNIMSDMGGKAGGLAII
+                     IGWIITAIGMISLAFVFQNLTNERPELDGGIYSYAQAGFGDFVGFISAWGYWFSAFLG
+                     NVAYATLLMSAVGNFFPIFKGGNTLPSVIVASLLLWGVHFLILKGVETAAFINSIVTV
+                     AKLIPILLVIICMIIAFNFDTFKTGFFSMTSEGVLPFSWASTMSQVKSTMLVTVWVFI
+                     GIEGAVIFSSRAKNKKDVGSATVIGLISVLIIYFLLTVLAQGVILQNHISQLDSPSMA
+                     QVLATIVGGWGSTLVNIGLIISVLGAWLGWTLLAGELPFIVAKDGLFPKWFAKENKNG
+                     APVNALLITNILVQLFLISMLFTQSAYQFAFSLASSAILYPYMFSAFYQVKYTLEHRQ
+                     QATTKQWTIGIIASIYAIWLIYAAGINYLLLTMLLYIPALLVYTIVQKNNQTRLIKSD
+                     YILFMIIIVLAVIGLIKLLMGTINVF"
+     gene            4964..5920
+                     /gene="arcC"
+     RBS             4964..4968
+                     /gene="arcC"
+     CDS             4979..5920
+                     /gene="arcC"
+                     /EC_number="2.7.2.2"
+                     /function="arginine degradation, third step"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="carbamate kinase"
+                     /protein_id="CAD98184.1"
+                     /db_xref="GI:31874423"
+                     /db_xref="GOA:Q7X2S2"
+                     /db_xref="InterPro:IPR001048"
+                     /db_xref="InterPro:IPR003964"
+                     /db_xref="UniProtKB/Swiss-Prot:Q7X2S2"
+                     /translation="MKEKIVIALGGNAIQTTEATAEAQQTAIRCAMQNLKPLFDSPAR
+                     IVISHGNGPQIGSLLIQQAKSNSDTTPAMPLDTCGAMSQGMIGYWLETEINRILTEMN
+                     SDRTVGTIVTRVEVDKDDPRFDNPTKPIGPFYTKEEVEELQKEQPDSVFKEDAGRGYR
+                     KVVASPLPQSILEHQLIRTLADGKNIVIACGGGGIPVIKKENTYEGVEAVIDKDFASE
+                     KLATLIEADTLMILTNVENVFINFNEPNQQQIDDIDVATLKKYAAQGKFVEGSMLPKI
+                     EAAIRFVESGENKKVIITNLEQAYEALIGNKGTHIHM"
+     gene            5975..6789
+                     /gene="arcR"
+     stem_loop       5975..5994
+                     /gene="arcR"
+                     /function="putative regulatory site"
+     RBS             6006..6010
+                     /gene="arcR"
+     CDS             6019..6723
+                     /gene="arcR"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="transcriptional regulator"
+                     /protein_id="CAD98185.1"
+                     /db_xref="GI:31874424"
+                     /db_xref="InterPro:IPR000595"
+                     /db_xref="InterPro:IPR011991"
+                     /db_xref="UniProtKB/TrEMBL:Q7X2S1"
+                     /translation="MTENFILGRNNKLEHELKALADYINIPYSILQPYQSECFVRHYT
+                     KGQVIYFSPQESSNIYFLIEGNIIREHYNQNGDVYRYFNKEQVLFPISNLFHPKEVNE
+                     LCTALTDCTVLGLPRELMAFLCKANDDIFLTLFALINDNEQQHMNYNMALTSKFAKDR
+                     IIKLICHLCQTVGYDQDEFYEIKQFLTIQLMSDMAGISRETAGHIIHELKDEKLVVKD
+                     HKNWLVSKHLFNDVCV"
+     terminator      6755..6789
+                     /gene="arcR"
+                     /note="putative rho-independent transcriptional
+                     terminator"
+     stem_loop       6820..6854
+     stem_loop       6860..6888
+     gene            7061..>7920
+                     /gene="clfB"
+     RBS             7061..7065
+                     /gene="clfB"
+     CDS             7073..>7920
+                     /gene="clfB"
+                     /function="surface located fibrinogen binding adhesin"
+                     /codon_start=1
+                     /transl_except=(pos:7073..7075,aa:Met)
+                     /transl_table=11
+                     /product="clumping factor B"
+                     /protein_id="CAD98186.1"
+                     /db_xref="GI:31874425"
+                     /db_xref="GOA:Q7X2S0"
+                     /db_xref="InterPro:IPR005877"
+                     /db_xref="InterPro:IPR008966"
+                     /db_xref="UniProtKB/TrEMBL:Q7X2S0"
+                     /translation="MKKRIDYLSNKQNKYSIRRFTVGTTSVIVGATILFGIGNHQAQA
+                     SEQSNDTTQSSKNNASADSEKNNMIETPQLNTTANDTSDISANTNSANVDSTTKPMST
+                     QTSNTTTTEPASTNETPQPTAIKNQATAAKMQDQTVPQEANSQVDNKTTNDANSIATN
+                     SELKNSQTLDLPQSSPQTISNAQGTSKPSVRTRAVRSLAVAEPVVNAADAKGTNVNDK
+                     VTASNFKLEKTTFDPNQSGNTFMAANFTVTDKVKSGDYFTAKLPDSLTGNGDVDYSNS
+                     NNTMPIA"
+ORIGIN      
+        1 aaatatataa acaagaagaa gtaatgttaa acacttataa ataattaaat tttaaataca
+       61 gcttatatat ggggtatacc tacattgata attgactttg taggtatacc ctctctttgt
+      121 aattagatga gaggagtgtg agggttgtct gccgaaagac tactcggcag tctaaaatca
+      181 ttacaagtag tagatatgtg ataattaaat gctgacttag aatacaaaat tcattttaaa
+      241 agttgtcaca aaaaatttac atgtattttt attatctttt gcaaaacaaa gtgttaaatt
+      301 ataaatgaaa catgcatgaa tttatttttt aatacaagaa acgtaactac caaaggagtt
+      361 tacaatatga agaaaagtaa acgattagaa attgtttcta caatagttaa aaagcataag
+      421 atttataaaa aagaacaaat catttcatat attgaagaat attttggtgt aagatatagt
+      481 gcaacaacaa ttgctaaaga cttgaaggaa ctaaatatat atcgtgtccc tatcgattgt
+      541 gagacatgga tttataaagc tattaataat caaacagaac aagagatgag agaaaagttt
+      601 agacactatt gtgaacatga agttctaagt tcaatcatca atggttcata cattatcgtc
+      661 aaaacctcac ctggtttcgc ccaaggcata aactatttta tcgatcagct aaatatagaa
+      721 gagatattag gtacggtgag tggaaatgac actacattaa tcttaactgc ctcaaatgat
+      781 atggcagaat acgtatatgc aaaattattt aaatagacat gtatcaaatg aataataaaa
+      841 atttgtttcg tatcacgtgt actcaagtta gttaccaaat attaacttgt gtacgcgttt
+      901 ttttatggaa agaaagaatt catagtcatt caattgactg tataaaaaac tttatacaac
+      961 atgtttttat gggtattttt gaataaaaaa tgtatatttt gacccaaaat acctttattt
+     1021 atgtataaaa atccattatt atgtattgta taacaaaaag atatgaaatt ttcgactttc
+     1081 tttatgtgaa tataatcaca tgtaagcgtt tgaagattgt ctatactcta aatgaattca
+     1141 aagataaaag gaggaaatag acatgacaga tggtccaatt aaagtaaata gcgaaattgg
+     1201 agctttaaaa actgtgttac ttaagcgtcc tggaaaagaa ttagaaaatt tagtacctga
+     1261 ttatttagat ggattactat ttgatgatat tccatattta gaagtagctc aaaaagagca
+     1321 tgaccatttt gcgcaggtgc taagagaaga gggtgttgaa gtactttacc ttgagaagtt
+     1381 agcagctgaa agtattgaaa atcctcaagt aagaagtgaa tttattgatg atgtattagc
+     1441 agagtctaaa aaaacaatat taggtcatga agaagaaatt aaggcattat ttgcgacact
+     1501 ttctaatcaa gaacttgtag ataaaataat gtcaggggta cgtaaggaag aaattaatcc
+     1561 gaaatgtaca catctagtag agtatatgga tgataagtat ccattctatt tagatccaat
+     1621 gccaaacctt tattttacta gagatccaca agcctcaata ggacacggta taacaatcaa
+     1681 tcggatgttc tggagagcac gacgacgaga atcaatattt attcaatata ttgtaaagca
+     1741 tcatcctaga tttaaagatg cgaatattcc aatctggtta gatcgagatt gcccattcaa
+     1801 tattgaaggc ggcgatgaac ttgttttatc taaagatgtc ttggctatag gcgtttcaga
+     1861 acgtacatct gcacaagcta ttgaaaagtt agcgcgacgt atttttgaaa atccgcaggc
+     1921 gacgtttaaa aaagtagtag caattgaaat tccaactagt cgaactttta tgcacttaga
+     1981 tacagtattt acaatgatag attatgacaa atttacaatg cattcagcca ttttaaaggc
+     2041 agaaggcaat atgaatatat ttattattga atatgatgac gtaaataaag atattgccat
+     2101 caaacaatct agtcatttaa aagatacttt agaagacgta ctaggtatag atgatatcca
+     2161 attcattcca acaggaaatg gtgatgtcat tgatggtgct agagagcaat ggaatgatgg
+     2221 ctcaaataca ttatgtataa gaccaggcgt tgtagtgact tacgatagaa actatgtatc
+     2281 gaatgattta ttgagacaaa aaggcattaa agtcattgaa atatctggta gcgagttggt
+     2341 acgtggacgt gggggcccta gatgtatgag tcaaccatta ttcagagagg acatttaacg
+     2401 taataaatta tagaaacgag ggtgaaaata atgacagaaa ttcaaaaacc gtatgattta
+     2461 aaaggcagat cattattaaa agaaagtgat tttaccaaag cagaattcga aggacttatt
+     2521 gattttgcaa ttacattaaa agagtataag aaaaacggta ttaagcatca ctacttatct
+     2581 ggaaaaaata ttgcactact attcgaaaag aattcgacga gaacgcgtgc tgcgtttaca
+     2641 gttgcgtcta ttgatttagg tgcgcatcca gaatttttag gaaaaaatga tattcaatta
+     2701 ggcaaaaaag aatctgtaga ggatactgcg aaagtattag gtagaatgtt cgatggtatt
+     2761 gaattccgtg gtttttcaca acaagctgtt gaagatttag cgaagttctc tggtgtaccg
+     2821 gtgtggaatg gattaacaga cgattggcat cctacacaaa tgttagctga ttttatgaca
+     2881 ataaaagaga attttggata tctagaagga ataaacttaa cttacgttgg agatggacgt
+     2941 aataatattg cgcattcatt aatggtagca ggtgctatgt taggtgttaa tgtaagaatt
+     3001 tgtacaccta aatcattaaa tccaaaagag gcatatgttg atattgcaaa agaaaaagcg
+     3061 agtcaatatg gtggttcagt catgattacg gataatattg cagaagcagt tgaaaataca
+     3121 gatgctatat atacagatgt ttgggtatcg atgggtgaag aaagtgaatt tgaacaacgt
+     3181 attaatttat taaaagacta tcaagtgaat caacagatgt ttgatttaac aggtaaagat
+     3241 tcaacgatat tcttacattg tttaccagca ttccatgata caaatacact ttatggacaa
+     3301 gaaatttatg aaaaatatgg attagctgaa atggaagtta cagaccaaat ctttagaagt
+     3361 gaacattcaa aagtgtttga tcaagctgaa aatagaatgc atacaattaa ggcagtaatg
+     3421 gcagcaacat tggggagtta atcactaaat ggaacgatat gaatatgatg tgtctgatga
+     3481 tataagtgtc atgtacagac acctcatatt ggtattaaag gagaaatgaa tatgaacgaa
+     3541 tcaggagata acaaactcag taaatcttct ttaattggac tagttatagg atccatgatt
+     3601 ggtggcggtg cgttcaatat aatgtctgat atgggcggta aagccggtgg attagccatt
+     3661 attattggtt ggattattac agctatagga atgatttcat tagcgttcgt atttcaaaat
+     3721 ttaaccaatg aacggccgga gctagacggt ggtatttata gttatgctca agcaggattt
+     3781 ggcgattttg taggatttat cagtgcttgg ggatattggt tctcagcgtt tttaggcaat
+     3841 gttgcctatg caacactatt gatgtcagca gtaggtaact ttttcccgat ttttaaagga
+     3901 ggcaacacat taccaagtgt tattgtcgcc tcgttactac tctggggtgt ccatttcttg
+     3961 attttaaaag gcgttgaaac agcagcattt atcaatagta ttgttactgt tgcaaagtta
+     4021 ataccgattt tacttgtaat catatgcatg ataattgcat tcaattttga cacttttaaa
+     4081 acaggctttt tcagtatgac gtcagagggt gtattgccat ttagttgggc gagcacaatg
+     4141 agccaagtta aaagtacgat gctagtgaca gtttgggtgt ttatcggtat cgaaggtgca
+     4201 gtaatttttt ctagtagagc taaaaataaa aaagatgtag gtagtgccac ggttatagga
+     4261 cttatatcag ttttaattat ctatttctta ttaactgtat tagctcaagg cgtgattttg
+     4321 caaaatcata tttcgcaatt agattcgcca agtatggcac aggtgcttgc aactattgta
+     4381 ggtggttggg gatctacact tgtaaatatt ggtttaatta tttcggtact aggtgcatgg
+     4441 ttaggatgga cactgcttgc tggtgaatta cctttcattg ttgcaaaaga tggattattt
+     4501 ccaaaatggt ttgctaaaga aaataaaaat ggagcacctg taaatgcact gcttattacc
+     4561 aatatattag tacaattatt tttaataagt atgctattta cacagagtgc gtatcaattt
+     4621 gcattttcac tagcatcaag tgctatttta tacccttaca tgttcagtgc attttaccaa
+     4681 gttaaataca ctttagagca tcgacagcaa gcaactacta aacaatggac gattggtatc
+     4741 atagcctcaa tttatgctat atggcttata tatgcagcag gtatcaatta cttattattg
+     4801 acgatgttac tttatattcc agctcttctt gtttatacaa tcgttcaaaa gaataatcag
+     4861 acacgtttga ttaaatcaga ctatattctt tttatgatta ttatcgtact tgcagttatc
+     4921 gggttaatta agttattgat gggaacgata aatgtttttt aaaaggagcg acaaaaatat
+     4981 gaaagagaaa attgtcattg cattaggcgg taatgcgata cagacaacag aagcaacagc
+     5041 tgaagcacaa caaacagcta ttagatgtgc gatgcaaaac cttaaacctt tatttgattc
+     5101 accagcgcgt attgtcattt cacatggtaa tggtccacaa attggaagtt tattaatcca
+     5161 acaagctaaa tcgaacagtg acacaacgcc ggcaatgcca ttggatactt gtggtgcaat
+     5221 gtcacagggt atgataggct attggttgga aactgaaatc aatcgcattt taactgaaat
+     5281 gaatagtgat agaactgtag gcacaatcgt tacacgtgtg gaagtagata aagatgatcc
+     5341 acgatttgat aacccaacta aaccaattgg tcctttttat acgaaagaag aagttgaaga
+     5401 attacaaaaa gaacagccag actcagtctt taaagaagat gcaggacgtg gttatagaaa
+     5461 agtagttgcg tcaccactac ctcaatctat actagaacac cagttaattc gaactttagc
+     5521 agacggtaaa aatattgtca ttgcatgcgg tggtggcggt attccagtta taaaaaaaga
+     5581 aaatacctat gaaggtgttg aagcggttat agataaagat tttgctagtg agaaattagc
+     5641 aacgctgatt gaagcagata ccttaatgat tcttacgaat gtagaaaatg tatttattaa
+     5701 ctttaatgaa cctaatcaac aacaaatcga tgatattgat gtagcaacac tgaaaaaata
+     5761 cgcggcacaa ggtaagtttg tggaaggatc gatgttgcca aaaatagaag ctgcgatacg
+     5821 atttgttgaa agtggggaaa acaaaaaagt tatcattacc aatttagagc aggcatacga
+     5881 agctttgatt ggtaataaag gtacacacat tcacatgtag cactttatca cgcgacaaaa
+     5941 cattaaatat gtttctccgt tgattcaaat gaaaaagttg tctgctgaca ctttgcaagg
+     6001 tttgaaggag tttaacttat gacagaaaac tttattttgg gtagaaataa taaattagaa
+     6061 catgaactaa aggcattagc agattacatt aatataccat atagtatatt acaaccatat
+     6121 caaagtgaat gttttgtcag acattatacg aaaggccaag ttatttattt ttcgccacaa
+     6181 gaaagtagca atatttactt tttaattgaa ggtaacatta ttagagaaca ttacaatcaa
+     6241 aatggagatg tatatcgtta ttttaataaa gagcaagtat tatttccaat cagtaactta
+     6301 tttcatccga aagaggttaa cgaattgtgt acagcattaa ccgattgtac agttcttgga
+     6361 ttgcctagag aattgatggc ctttttgtgc aaagctaatg atgatatatt tttgacactt
+     6421 tttgcattaa taaatgataa tgagcagcaa cacatgaact ataacatggc attaacaagt
+     6481 aaatttgcta aagatcgaat tatcaaattg atatgccatc tatgtcagac agtaggatac
+     6541 gatcaagatg aattttatga aatcaaacag tttttaacta ttcaactcat gagtgatatg
+     6601 gctgggattt cccgggaaac agctggtcat attattcatg aacttaaaga tgaaaaactt
+     6661 gttgttaaag atcataaaaa ttggttagta agcaaacatt tattcaatga tgtatgtgtt
+     6721 taatatacaa tgtaaaatga ataagttgaa catgaggtct aacgtacatt tatacgttag
+     6781 gccttttttg ctagcatgat gaataattta aaatgttagt taaatttgat tgttgaaatt
+     6841 acagtaaaat ttaaggtgat gaaaaattta gaacttctaa gtttttgaaa agtaaaaaat
+     6901 ttgtaatagt gtaaaaatag tatattgatt tttgctagtt aacagaaaat tttaagttat
+     6961 ataaatagga agaaaacaaa ttttacgtaa tttttttcga aaagcaattg atataattct
+     7021 tatttcatta tacaatttag actaatctag aaattgaaat ggagtaatat ttttgaaaaa
+     7081 aagaattgat tatttgtcga ataagcagaa taagtattcg attagacgtt ttacagtagg
+     7141 taccacatca gtaatagtag gggcaactat actatttggg ataggcaatc atcaagcaca
+     7201 agcttcagaa caatcgaacg atacaacgca atcttcgaaa aataatgcaa gtgcagattc
+     7261 cgaaaaaaac aatatgatag aaacacctca attaaataca acggctaatg atacatctga
+     7321 tattagtgca aacacaaaca gtgcgaatgt agatagcaca acaaaaccaa tgtctacaca
+     7381 aacgagcaat accactacaa cagagccagc ttcaacaaat gaaacacctc aaccgacggc
+     7441 aattaaaaat caagcaactg ctgcaaaaat gcaagatcaa actgttcctc aagaagcaaa
+     7501 ttctcaagta gataataaaa caacgaatga tgctaatagc atagcaacaa acagtgagct
+     7561 taaaaattct caaacattag atttaccaca atcatcacca caaacgattt ccaatgcgca
+     7621 aggaactagt aaaccaagtg ttagaacgag agctgtacgt agtttagctg ttgctgaacc
+     7681 ggtagtaaat gctgctgatg ctaaaggtac aaatgtaaat gataaagtta cggcaagtaa
+     7741 tttcaagtta gaaaagacta catttgaccc taatcaaagt ggtaacacat ttatggcggc
+     7801 aaattttaca gtgacagata aagtgaaatc aggggattat tttacagcga agttaccaga
+     7861 tagtttaact ggtaatggag acgtggatta ttctaattca aataatacga tgccaattgc
+//
