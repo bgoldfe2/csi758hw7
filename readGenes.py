@@ -9,3 +9,14 @@ def readGenesIn(fname):
     glocs = gb. GeneLocs ( data , klocs )
     #glocs [0]
     return glocs
+
+def GetData( indir ):
+    a = os.listdir( indir )
+    bglocs = []
+    for i in a:
+        fbact = indir + i
+        print(fbact) 
+        bglocs.append(readGenesIn(fbact))
+    return bglocs
+
+        
