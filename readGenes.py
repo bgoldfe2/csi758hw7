@@ -35,10 +35,10 @@ def getGeneData():
                 #print("codon",codon)
                 if (not isComp and codon == 'atg'): # these are the START 
                     #print("START Gene",isComp)
-                    startList.append(dna[stNum:stNum+53])
+                    startList.append(dna[stNum-30:stNum+23])
                 else:  # This is NOT a START
                     #print("NOT start Gene",isComp)
-                    nonStartList.append(dna[stNum:stNum+53])
+                    nonStartList.append(dna[stNum-30:stNum+23])
 
     #print("start size",len(startList),"nst size",len(nonStartList))
     return startList,nonStartList
@@ -80,24 +80,64 @@ def splitTrain(start):
 
 def getCounts(train):
     M = []
+    # Minus the last one due to k+1 evaluation
+    seqCnt = len(train[0]) - 1
     # allocate 52 arrays
-    for j in range(52):
+    for i in range(seqCnt):
         M.append(np.zeros((4,4)))
+
+    print(len(M),M[0].shape)
+    #index = 4*k + 
+    for h in train:
+        clist = list(h)
+        #print(clist[0],clist[1],clist[2])
+        for j in range(len(clist)-1):
+            k = sc2n(clist[j])
+            kp1 = sc2n(clist[j+1])
+            #print('j',j,'k',k,'kp1',kp1)
+            M[j][k][kp1] += 1
+
+    return M
+                       
+def sc2n(c):  # Stands for simple char to number
+    # sends back the int for the char a=0,c=1,g=2,t=3
+    ic = -1
+    if (c == 'a'):
+        ic = 0
+    elif(c == 'c'):
+        ic = 1
+    elif(c == 'g'):
+        ic = 2
+    elif(c == 't'):
+        ic = 3
+
+    return ic
+
+def chars2Num(train):
+    M = []
+    # Minus the last one due to k+1 evaluation
+    seqCnt = len(train[0]) - 1
+    # allocate 52 arrays
+    for j in range(seqCnt):
+        M.append(np.zeros((4,4)))
+    
 
 #TODO need to convert letters to index numbers
 
-    for k in range(52):    
-        for h in range(len(train[:5])):
-            print(train[h][k],train[h][k+1])
+    for h in range(len(train[:5])):
+        slist = list(train[h])
+        
+
+    return train
                 
 def Driver():
     start, nonStart = getGeneData()
     stTrain,stOp = splitTrain(start)
-    getCounts(stTrain)
+    #testTrain = chars2Num(stTrain)
+    
+    M1 = getCounts(stTrain)
 
     
-    return stTrain
+    return M1
                 
 
-                
->>>>>>> f228cc02ec64aabdb5d53ca903f9cac9bc71fcd3
