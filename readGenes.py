@@ -1,4 +1,5 @@
 import genbank as gb
+import math
 
 def readGenesIn(fname):
     # Read in the bacteria file and parse the dna
@@ -40,7 +41,7 @@ def getGeneData():
                     nonStartList.append(dna[stNum:stNum+53])
 
     print("start size",len(startList),"nst size",len(nonStartList))
-    return startList,nonStartList,glocs
+    return startList,nonStartList
 
 def preCheck(start,dna):
     # check for chars 30 in front 20 after and valid A, T, G, C
@@ -69,8 +70,18 @@ def preCheck(start,dna):
                 goodness = False
 
     return goodness,stNum,endNum
+
+def splitTrain(start):
+    total = len(start)
+    trainSize = math.floor(total * .2)
+    stTrain = start[:trainSize]
+    stOp = start[trainSize:]
+    return stTrain,stOp
                 
-                
+def Driver():
+    start, nonStart = getGeneData()
+    stTrain,stOp = splitTrain(start)
+    
                 
 
                 
