@@ -2,6 +2,8 @@ import genbank as gb
 import math
 import numpy as np
 import csv
+import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
 
 def readGenesIn(fname):
     # Read in the bacteria file and parse the dna
@@ -187,6 +189,19 @@ def list2File(fname,data):
         wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
         wr.writerow(data)
         
+
+
+def plotG(mu,sd,labs):
+    # plot the mu,sd
+    x = np.linspace(-10, 10, 100)
+    fig = plt.figure()
+    ax = plt.subplot(111)
+    for i in range(3):
+        ax.plot(x,mlab.normpdf(x, mu[i], sd[i]),label=labs[i])
+
+    ax.legend()
+    plt.show()
+
                 
 def Driver():
     start, nonStart = getGeneData()
@@ -209,11 +224,12 @@ def Driver():
     stOpScore = np.array(scoreString(M4,stOp))
     nonStScore = np.array(scoreString(M4,nonStart))
     
-    np.mean(sttScore)
+    mu = [np.mean(sttScore),np.mean(stOpScore),np.mean(nonStScore)]
+    sd = [np.std(sttScore),np.std(stOpScore),np.std(nonStScore)]
+    labs = ['Training Starts', 'Non Training Starts','Non Starts']
+    plotG(mu,sd,labs)
+
     
-
-    print('stt mean',allMeans[0])
-
     return M4
                 
 
