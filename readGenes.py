@@ -113,31 +113,59 @@ def sc2n(c):  # Stands for simple char to number
 
     return ic
 
-def chars2Num(train):
-    M = []
-    # Minus the last one due to k+1 evaluation
-    seqCnt = len(train[0]) - 1
-    # allocate 52 arrays
-    for j in range(seqCnt):
-        M.append(np.zeros((4,4)))
+def convProb(M):
+
+    M2 = []
     
+    for MM in M:
+        #print(MM.shape)
+        rs = MM.sum(axis=1).astype(float)
+        #print('rowsum',rs)
+        #rowSum.append(rs)
+        MM = MM/rs
+        #print(MM)
+        M2.append(MM)
 
-#TODO need to convert letters to index numbers
+    return M2
 
-    for h in range(len(train[:5])):
-        slist = list(train[h])
+def convOdds(M2):
+    M3 = []
+    odds = 0.25
+    
+    for MM in M2:
+        MM = MM/odds
+        #print(MM)
+        M3.append(MM)
+
+    return M3
+
+def logOdds(M3):
+    M4 = []
+    
+    for MM in M3:
+        MM = np.log(MM)
+        #print(MM)
+        M4.append(MM)
+
+    return M4
         
-
-    return train
                 
 def Driver():
     start, nonStart = getGeneData()
     stTrain,stOp = splitTrain(start)
-    #testTrain = chars2Num(stTrain)
-    
+
+    # Get the initial counts matrix    
     M1 = getCounts(stTrain)
 
+    # convert to a probability matrix
+    M2 = convProb(M1)
+
+    # convert to odds by dividing by 0.25
+    M3 = convOdds(M2)
+
+    # get log of odds matrix
+    M4 = logOdds(M3)
     
-    return M1
+    return M4
                 
 
