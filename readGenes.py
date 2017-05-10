@@ -1,6 +1,7 @@
 import genbank as gb
 import math
 import numpy as np
+import csv
 
 def readGenesIn(fname):
     # Read in the bacteria file and parse the dna
@@ -86,7 +87,7 @@ def getCounts(train):
     for i in range(seqCnt):
         M.append(np.zeros((4,4)))
 
-    print(len(M),M[0].shape)
+    #print(len(M),M[0].shape)
     #index = 4*k + 
     for h in train:
         clist = list(h)
@@ -141,13 +142,50 @@ def convOdds(M2):
 
 def logOdds(M3):
     M4 = []
+    replace = np.zeros((4,4))+0.0
     
     for MM in M3:
         MM = np.log(MM)
+        
+        ind = np.isnan(MM)
+        #print("ind",ind)
+        MM[ind] = replace[ind]
+        ind = np.isinf(MM)
+        #print("ind",ind)
+        MM[ind] = replace[ind]
         #print(MM)
         M4.append(MM)
 
     return M4
+
+def scoreString(M4,stringList):
+    # Question 4 score the distributions
+    sttScore = []
+    score = 0.0
+    # loop through the strings
+    for h in stringList:
+        geneNum = 0
+        # convert string to list of chars
+        clist = list(h)
+        #print(clist[0],clist[1],clist[2])
+        for j in range(len(clist)-1):
+            k = sc2n(clist[j])
+            kp1 = sc2n(clist[j+1])
+            #print('j',j,'k',k,'kp1',kp1)
+            #read and sum the values
+            score += float(M4[geneNum][k][kp1])
+            #print('score',j,score)
+        
+        # Append the total score to list
+        sttScore.append(score)
+        score = 0.0
+
+    return sttScore
+
+def list2File(fname,data):
+    with open(fname, 'w') as myfile:
+        wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+        wr.writerow(data)
         
                 
 def Driver():
@@ -165,7 +203,17 @@ def Driver():
 
     # get log of odds matrix
     M4 = logOdds(M3)
+
+    # score all of the strings
+    sttScore = np.array(scoreString(M4,stTrain))
+    stOpScore = np.array(scoreString(M4,stOp))
+    nonStScore = np.array(scoreString(M4,nonStart))
     
+    np.mean(sttScore)
+    
+
+    print('stt mean',allMeans[0])
+
     return M4
                 
 
