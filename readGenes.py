@@ -163,7 +163,7 @@ def scoreString(M4,stringList):
     score = 0.0
     geneNum = 0
     # loop through the strings
-    for h in stringList[:10]:
+    for h in stringList:
         
         # convert string to list of chars
         clist = list(h)
@@ -227,7 +227,7 @@ def list2File(fname,data):
 
 def plotG(mu,sd,labs):
     # plot the mu,sd
-    x = np.linspace(-10, 10, 100)
+    x = np.linspace(-10, 20, 100)
     fig = plt.figure()
     ax = plt.subplot(111)
     for i in range(3):
@@ -260,13 +260,16 @@ def Driver():
     
     mu = [np.mean(sttScore),np.mean(stOpScore),np.mean(nonStScore)]
     sd = [np.std(sttScore),np.std(stOpScore),np.std(nonStScore)]
+    print(mu)
+    print(sd)
     labs = ['Training Starts', 'Non Training Starts','Non Starts']
     plotG(mu,sd,labs)
 
     hiValCodon = findMaxScores(M4)
+    print(hiValCodon[:5])
 
     # this resulted in (29,33,45,36,22)
-    hiVals = [29,33,45,36,22]
+    hiVals = [x[2] for x in hiValCodon[:5]]
     M5 = makeImportant(M4,hiVals)
 
     sttSc2 = np.array(scoreString(M5,stTrain))
@@ -275,6 +278,8 @@ def Driver():
     
     mu2 = [np.mean(sttSc2),np.mean(stOpSc2),np.mean(nonStSc2)]
     sd2 = [np.std(sttSc2),np.std(stOpSc2),np.std(nonStSc2)]
+    print(mu2)
+    print(sd2)
     labs = ['Training Starts', 'Non Training Starts','Non Starts']
     plotG(mu2,sd2,labs)
 
