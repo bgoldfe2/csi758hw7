@@ -4,6 +4,7 @@ import numpy as np
 import csv
 import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
+from operator import itemgetter, attrgetter
 
 def readGenesIn(fname):
     # Read in the bacteria file and parse the dna
@@ -23,27 +24,23 @@ def getGeneData():
         #print(path + filename)
         data,dna = readGenesIn(path+filename)
         
-        # Find the keywoed locations and gene locations
+        # Find the keyword locations and gene locations
         klocs = gb.FindKeywordLocs ( data )
         glocs = gb.GeneLocs ( data , klocs )
     
         for start in glocs:
-            #print("=====================================")
             # check for valid gene
             goodness,stNum,endNum = preCheck(start,dna)
             if (goodness):
                 # Check that the complement is False aka a Non-Complement
                 isComp = start[1]
                 codon = dna[stNum:stNum+3]
-                #print("codon",codon)
+                
                 if (not isComp and codon == 'atg'): # these are the START 
-                    #print("START Gene",isComp)
                     startList.append(dna[stNum-30:stNum+23])
                 else:  # This is NOT a START
-                    #print("NOT start Gene",isComp)
                     nonStartList.append(dna[stNum-30:stNum+23])
 
-    #print("start size",len(startList),"nst size",len(nonStartList))
     return startList,nonStartList
 
 def preCheck(start,dna):
@@ -164,25 +161,62 @@ def scoreString(M4,stringList):
     # Question 4 score the distributions
     sttScore = []
     score = 0.0
+    geneNum = 0
     # loop through the strings
-    for h in stringList:
-        geneNum = 0
+    for h in stringList[:10]:
+        
         # convert string to list of chars
         clist = list(h)
         #print(clist[0],clist[1],clist[2])
         for j in range(len(clist)-1):
             k = sc2n(clist[j])
             kp1 = sc2n(clist[j+1])
-            #print('j',j,'k',k,'kp1',kp1)
+            #print('gn',geneNum,'j',j,'k',k,'kp1',kp1)
             #read and sum the values
-            score += float(M4[geneNum][k][kp1])
-            #print('score',j,score)
+            val = float(M4[j][k][kp1])
+            score += val
+            
+            #print('gn',geneNum,'score',j,score)
         
         # Append the total score to list
+        #print('gn',geneNum,'final score',score)
         sttScore.append(score)
         score = 0.0
+        geneNum += 1
 
     return sttScore
+
+def findMaxScores(strList):
+    #My creative solution
+    out = []
+    ind = 0
+
+    for a in strList:
+        mxInd = np.unravel_index(a.argmax(), a.shape)
+        mxVal = a.max()
+        out.append((mxVal,mxInd,ind))
+        ind += 1
+        
+    sout = sorted(out, key=lambda x: x[0],reverse=True)
+
+    return sout
+
+def makeImportant(M4,hiVals):
+    # make all but the important zeros
+    M5 = []
+    replace = np.zeros((4,4))+0.0
+    ind = 0
+    for MM in M4:
+        if (ind in hiVals):
+            MM = M4[ind]
+            M5.append(MM)
+        else:
+            MM = replace
+            M5.append(MM)
+            
+        ind += 1
+
+    return M5    
 
 def list2File(fname,data):
     with open(fname, 'w') as myfile:
@@ -229,7 +263,20 @@ def Driver():
     labs = ['Training Starts', 'Non Training Starts','Non Starts']
     plotG(mu,sd,labs)
 
+    hiValCodon = findMaxScores(M4)
+
+    # this resulted in (29,33,45,36,22)
+    hiVals = [29,33,45,36,22]
+    M5 = makeImportant(M4,hiVals)
+
+    sttSc2 = np.array(scoreString(M5,stTrain))
+    stOpSc2 = np.array(scoreString(M5,stOp))
+    nonStSc2 = np.array(scoreString(M5,nonStart))
     
-    return M4
+    mu2 = [np.mean(sttSc2),np.mean(stOpSc2),np.mean(nonStSc2)]
+    sd2 = [np.std(sttSc2),np.std(stOpSc2),np.std(nonStSc2)]
+    labs = ['Training Starts', 'Non Training Starts','Non Starts']
+    plotG(mu2,sd2,labs)
+
                 
 
