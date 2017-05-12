@@ -122,7 +122,9 @@ def convProb(M):
         rs = MM.sum(axis=1).astype(float)
         #print('rowsum',rs)
         #rowSum.append(rs)
-        MM = MM/rs
+        #AAAAHhhhhh this math is wrong as discovered on final!!!!
+        #MM = MM/rs
+        MM = (MM.T / rs).T
         #print(MM)
         M2.append(MM)
 
